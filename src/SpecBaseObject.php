@@ -230,7 +230,7 @@ abstract class SpecBaseObject implements SpecObjectInterface
 
     public function __isset($name)
     {
-        if (isset($this->_properties[$name]) || isset(static::attributes()[$name])) {
+        if (isset($this->_properties[$name])) {
             return $this->__get($name) !== null;
         }
 
